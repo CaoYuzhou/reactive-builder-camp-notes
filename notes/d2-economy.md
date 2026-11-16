@@ -29,9 +29,9 @@ cast call $SYSTEM_CONTRACT_ADDR "_maxChargeGas()" --rpc-url $REACTIVE_RPC | cast
 | `_extraGas()` | `0x…0186a0` | 100000 |
 | `_maxChargeGas()` | `0x…c350` | 50000 |
 
-说明：本机 Foundry 还在安装中，这次的输出是对同一 RPC 发 `eth_call`（`cast call` 底层发的就是这个请求）拿到的，数值与 `cast call` 的输出一致；装好 Foundry 后会用上面三条命令重跑一遍确认。
+运行环境：本机 Windows + MSYS2 UCRT64 终端，Foundry 1.9.0（forge / cast，commit 6056c58），2026-11-17 运行，输出如上。
 
-三个值和文档写的默认值一致。另外查了一下当时的 gas 价格：`cast gas-price --rpc-url $REACTIVE_RPC` → 100000000000（100 gwei）。
+三个值和文档写的默认值一致。另外，当时 Lasna 的 gas 价格是 100 gwei（100000000000 wei，用 eth_gasPrice 查询）。
 
 ## 1. 一次 react() 的费用怎么算？
 
